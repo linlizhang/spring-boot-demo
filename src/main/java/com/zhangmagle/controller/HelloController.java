@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.zhangmagle.service.AnnotationService;
 import com.zhangmagle.service.HelloService;
 
 @RestController
@@ -14,9 +15,17 @@ public class HelloController {
 	
 	@Autowired
 	private HelloService helloService;
+	
+	@Autowired
+	private AnnotationService annotationService;
 
 	@RequestMapping(value = "/{name}", method=RequestMethod.GET)
 	public String hello(@PathVariable String name) {
 		return helloService.hello(name);
+	}
+	
+	@RequestMapping(value = "/annotation", method=RequestMethod.GET)
+	public void annotate() {
+		annotationService.annotation();
 	}
 }
