@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-// webServlet annotation works with @ServletComponentScan
+// webServlet annotation works with @ServletComponentScan and @ServletComponentScan only works in embedded Servlet container.
 @WebServlet(urlPatterns = {"/servlet"})
 public class CustomizedServlet extends HttpServlet {
 	
