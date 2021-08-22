@@ -11,11 +11,11 @@ import com.zhangmagle.web.CustomizedServlet;
 @Configuration
 public class WebConfiguration {
 	
-	@Bean
-	public ServletRegistrationBean<CustomizedServlet> customizedServletBean() {
-		ServletRegistrationBean<CustomizedServlet> bean = new ServletRegistrationBean<>(new CustomizedServlet(), "/servlet");
-		return bean;
-	}
+//	@Bean
+//	public ServletRegistrationBean<CustomizedServlet> customizedServletBean() {
+//		ServletRegistrationBean<CustomizedServlet> bean = new ServletRegistrationBean<>(new CustomizedServlet(), "/servlet");
+//		return bean;
+//	}
 	
 	@Bean
 	public ServletListenerRegistrationBean<CustomizedListener> customizedListenerBean() {
