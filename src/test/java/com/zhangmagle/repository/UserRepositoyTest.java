@@ -5,10 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+import com.zhangmagle.SpringBootDemoApplication;
 import com.zhangmagle.model.internal.User;
+import com.zhangmagle.repository.UserRepository;
 
-@SpringBootTest
-@EnableJpaRepositories(basePackages = {"com.zhangmagle"})
+@SpringBootTest(
+		  classes = SpringBootDemoApplication.class)
+@EnableJpaRepositories(
+		  basePackages = { "com.zhangmagle" })
 public class UserRepositoyTest {
 	
 	@Autowired

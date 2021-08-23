@@ -72,7 +72,7 @@ public class MySQLAutoConfiguration {
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 		final LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
 		em.setDataSource(dataSource());
-		em.setPackagesToScan("com.zhangmagle.repository");
+		em.setPackagesToScan("com.zhangmagle.model.internal");
 		em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 		if (additionalProperties() != null) {
 			em.setJpaProperties(additionalProperties());

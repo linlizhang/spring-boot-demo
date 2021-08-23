@@ -2,8 +2,10 @@ package com.zhangmagle.model.internal;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "USER", schema = "myDb")
 public class User {
 
 	@Id
